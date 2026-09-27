@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        user-scalable=no"
+    >
+
+    <title>AI.Mehrob</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="brand">
+
+            <img
+                src="profile.jpeg"
+                class="profile"
+                alt="AI.Mehrob"
+            >
+
+            <div>
+                <h1>AI.Mehrob</h1>
+
+                <p>
+                    AI Creator • Ёвари зеҳнӣ
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="header-buttons">
+
+            <button id="newChatBtn">
+                ＋
+            </button>
+
+            <button id="toolsBtn">
+                🧰
+            </button>
+
+            <button id="settingsBtn">
+                ⚙️
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="main">
+
+
+        <!-- Welcome -->
+
+        <section
+            id="welcome"
+            class="welcome"
+        >
+
+            <img
+                src="profile.jpeg"
+                class="big-profile"
+                alt="AI.Mehrob"
+            >
+
+            <h2>
+                Салом 👋
+            </h2>
+
+            <h3>
+                Ман AI.Mehrob ҳастам
+            </h3>
+
+            <p>
+                Ман метавонам ба ту дар
+                барномасозӣ, омӯзиш, идеяҳо,
+                тарҷума, навиштани матн ва
+                бисёр корҳои дигар ёрӣ диҳам.
+            </p>
+
+        </section>
+
+
+        <!-- Suggestions -->
+
+        <div class="suggestions">
+
+            <button class="suggestion">
+                💻 C# омӯзон
+            </button>
+
+            <button class="suggestion">
+                🌐 Сайт соз
+            </button>
+
+            <button class="suggestion">
+                💡 Идея деҳ
+            </button>
+
+            <button class="suggestion">
+                📱 iOS омӯзон
+            </button>
+
+        </div>
+
+
+        <!-- Chat -->
+
+        <section
+            id="chat"
+            class="chat"
+        >
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         MESSAGE INPUT
+    ========================== -->
+
+    <footer class="composer">
+
+        <div class="input-box">
+
+            <button
+                id="voiceBtn"
+                class="input-button"
+            >
+                🎙️
+            </button>
+
+
+            <textarea
+                id="messageInput"
+                placeholder="Паём навис..."
+                rows="1"
+            ></textarea>
+
+
+            <button
+                id="fileBtn"
+                class="input-button"
+            >
+                📎
+            </button>
+
+            <input
+                type="file"
+                id="fileInput"
+                hidden
+            >
+
+        </div>
+
+
+        <button
+            id="sendBtn"
+            class="send-button"
+        >
+            ➤
+        </button>
+
+    </footer>
+
+
+    <!-- =========================
+         SETTINGS
+    ========================== -->
+
+    <div
+        id="settingsModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <h2>
+                ⚙️ Танзимот
+            </h2>
+
+
+            <label>
+                Backend URL
+            </label>
+
+            <input
+                id="backendUrl"
+                type="text"
+                placeholder="https://example.com/api/chat"
+            >
+
+
+            <label>
+                Забон
+            </label>
+
+            <select id="language">
+
+                <option value="auto">
+                    Автоматӣ
+                </option>
+
+                <option value="tg">
+                    Тоҷикӣ
+                </option>
+
+                <option value="ru">
+                    Русӣ
+                </option>
+
+                <option value="en">
+                    English
+                </option>
+
+            </select>
+
+
+            <div class="modal-buttons">
+
+                <button id="saveSettings">
+                    💾 Захира
+                </button>
+
+                <button id="themeBtn">
+                    🌙 Мавзӯъ
+                </button>
+
+                <button id="exportBtn">
+                    📥 Export Chat
+                </button>
+
+                <button
+                    id="clearBtn"
+                    class="danger"
+                >
+                    🗑️ Тоза кардан
+                </button>
+
+                <button id="closeSettings">
+                    ✕ Бастан
+                </button>
+
+            </div>
+
+
+            <p class="small-text">
+                API Key-ро дар ин ҷо нанавис.
+                Он бояд танҳо дар сервер нигоҳ дошта шавад.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         TOOLS
+    ========================== -->
+
+    <div
+        id="toolsModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <h2>
+                🧰 AI Tools
+            </h2>
+
+
+            <div class="tools-grid">
+
+
+                <button
+                    class="tool"
+                    data-question="Ба ман C# ва ASP.NET Core-ро аз сифр омӯзон."
+                >
+
+                    💻
+
+                    <strong>
+                        Coding
+                    </strong>
+
+                    <span>
+                        Барномасозӣ
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="tool"
+                    data-question="Ин матнро ба тоҷикӣ тарҷума кун."
+                >
+
+                    🌐
+
+                    <strong>
+                        Translator
+                    </strong>
+
+                    <span>
+                        Тарҷума
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="tool"
+                    data-question="Барои ман 10 идеяи лоиҳаи IT пешниҳод кун."
+                >
+
+                    💡
+
+                    <strong>
+                        Ideas
+                    </strong>
+
+                    <span>
+                        Идеяҳо
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="tool"
+                    data-question="Маро бо 10 саволи барномасозӣ санҷ."
+                >
+
+                    🎓
+
+                    <strong>
+                        Study
+                    </strong>
+
+                    <span>
+                        Омӯзиш
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="tool"
+                    data-question="Ин матнро кӯтоҳ ва фаҳмо кун."
+                >
+
+                    ✍️
+
+                    <strong>
+                        Writer
+                    </strong>
+
+                    <span>
+                        Матн
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="tool"
+                    data-question="Барои сохтани барномаи iOS ба ман roadmap соз."
+                >
+
+                    📱
+
+                    <strong>
+                        iOS
+                    </strong>
+
+                    <span>
+                        iPhone
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+            <button
+                id="closeTools"
+                class="close-button"
+            >
+                Бастан
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="app.js"></script>
+
+</body>
+</html>
